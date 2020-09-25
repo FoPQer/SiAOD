@@ -1,6 +1,6 @@
-﻿#include <iostream>
+﻿/*#include <iostream>
 using namespace std;
-const int n = 100;
+const int n = 3;
 int* mas[n];
 int sup = 0;
 void add(int* a);
@@ -13,23 +13,24 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	*mas = new int[sup];
 	int* el = new int;
-	int sup2 = 0;
-	int sup3 = 0;
+	string sup2;
+	string sup3;
 	bool ssup = true;
 	while (true)
 	{
-		sup2 = 0;
 		cout << "Введите, что хотите сделать:\n1. Добавить элемент\n2. Удалить элемент\n3. Посмотреть последний\n4. Проверить очередь\n5. Ничего не делать\n";
 		cin >> sup2;
-		switch (sup2)
+		if (sup2.length() > 1)
+			sup2 = '6';
+		switch (sup2[0])
 		{
-		case 1:
+		case '1':
 			cout << "Введите элемент который хотите добавить\n";
 			cin >> *el;
 			add(el);
 			el = new int;
 			break;
-		case 2:
+		case '2':
 			if (chekEmpty())
 			{
 				cout << "Первый элемент в очереди: ";
@@ -39,33 +40,34 @@ int main()
 			else
 				cout << "Очередь пуста" << endl;
 			break;
-		case 3:
+		case '3':
 			if (chekEmpty())
 			{
 				cout << "Первый элемент в очереди: ";
-				chekEmpty();
+				chekFirst();
 				cout << endl;
 			}
 			else
 				cout << "Очередь пуста" << endl;
 			break;
-		case 4:
-			sup3 = 0;
+		case '4':
 			ssup = true;
 			while (ssup)
 			{
 				cout << "Хотите проверить на пустоту или полноту?(1. Полнота, 2. Пустота)" << endl;
 				cin >> sup3;
-				switch (sup3)
+				if (sup3.length() > 1)
+					sup3 = '6';
+				switch (sup3[0])
 				{
-				case 1:
+				case '1':
 					if (chekFull())
 						cout << "Очередь полна" << endl;
 					else
 						cout << "Очередь не полна" << endl;
 					ssup = false;
 					break;
-				case 2:
+				case '2':
 					if (chekEmpty())
 						cout << "Очередь не пуста" << endl;
 					else
@@ -78,7 +80,7 @@ int main()
 				}
 			}
 			break;
-		case 5:
+		case '5':
 			cout << "Приятно было поработать с вами, до свидания!";
 			return (0);
 		default:
@@ -124,4 +126,4 @@ bool chekFull()
 		return true;
 	else
 		return false;
-}
+}*/

@@ -13,10 +13,19 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Прак2">
+      <UniqueIdentifier>{9a3b82fa-8abf-46f8-907b-41d5e637314a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Прак1">
+      <UniqueIdentifier>{c1d7255c-711c-443a-8c0e-d2e1de4220fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Бинарное дерево.cpp">
+      <Filter>Исходные файлы\Прак2</Filter>
+    </ClCompile>
     <ClCompile Include="СиАОД.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Прак1</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
